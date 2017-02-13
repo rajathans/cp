@@ -1,0 +1,114 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    long long int d,r,c,ss;
+    char s[100000];
+    long long int tt;
+    long long int t,l,i,j,I,J;
+    scanf("%lld",&t);
+    while(t--)
+    {
+        scanf("%lld",&tt);
+        scanf("%s",s);
+        l=strlen(s);
+        long int A[l],B[l];
+        I=0;
+        J=0;
+        r=0;
+        i=0;
+        while(i<l)
+        {
+            if(s[i]=='B')
+            {
+                A[I]=i;
+                I++;
+            }
+            i++;
+            if(i<l)
+            {
+                if(s[i]=='G')
+                {
+                    B[J]=i;
+                    J++;
+                }
+            }
+            i++;
+        }
+        if(I!=J)
+        {
+            r=-1;
+        }
+        else
+        {
+            for(i=0;i<I;i++)
+            {
+                c=A[i]-B[i];
+                if(c<0)
+                    c=-c;
+                if(tt==0)
+                    c=1;
+                if(tt==2)
+                {
+                    d=c/2;
+                    c=d*4+1;
+                }
+                r=r+c;
+            }
+        }
+        I=0;
+        J=0;
+        ss=0;
+        i=0;
+        while(i<l)
+        {
+            if(s[i]=='G')
+            {
+                A[I]=i;
+                I++;
+            }
+            i++;
+            if(i<l)
+            {
+                if(s[i]=='B')
+                {
+                    B[J]=i;
+                    J++;
+                }
+            }
+            i++;
+        }
+        if(I!=J)
+        {
+            ss=-1;
+        }
+        else
+        {
+            for(i=0;i<I;i++)
+            {
+                c=A[i]-B[i];
+                if(c<0)
+                    c=-c;
+                if(tt==0)
+                    c=1;
+                if(tt==2)
+                {
+                    d=c/2;
+                    c=d*4+1;
+                }
+                ss=ss+c;
+            }
+        }
+        if(r<0)
+        {
+            r=ss;
+        }
+        else
+        {
+            if(ss>=0&&ss<r)
+            r=ss;
+        }
+        printf("%lld\n",r);
+    }
+    return 0;
+}

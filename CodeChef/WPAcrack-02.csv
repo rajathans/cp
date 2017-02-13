@@ -1,0 +1,7 @@
+
+BSSID, First time seen, Last time seen, channel, Speed, Privacy, Cipher, Authentication, Power, # beacons, # IV, LAN IP, ID-length, ESSID, Key
+00:25:5E:BD:F2:4C, 2014-10-06 14:57:38, 2014-10-06 15:00:15,  1,  54, WPA , TKIP,PSK, -83,     1486,       88,   0.  0.  0.  0,   5, Ajeet, 
+
+Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+90:18:7C:81:79:15, 2014-10-06 14:58:04, 2014-10-06 15:00:14, -92,      150, 00:25:5E:BD:F2:4C,
+
